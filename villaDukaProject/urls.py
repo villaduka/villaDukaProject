@@ -6,6 +6,6 @@ from django.utils.translation import gettext_lazy as _
 
 urlpatterns = i18n_patterns(
     path('', include('villawebapp.urls')),
-    path(_('admin/'), admin.site.urls),
+    path(_('villaadmin/'), admin.site.urls),
     prefix_default_language=False
 )
