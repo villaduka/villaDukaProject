@@ -13,9 +13,9 @@ from .juazzmin import JAZZMIN_SETTINGS
 SECRET_KEY = 'django-insecure-p40$3enb3-(wtbo(*jtp2w8obzpq4q%00acd10p-lv5$tm3s5+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['villaduka.com', 'www.villaduka.com', 'https://villaduka-52020258312a.herokuapp.com/']
+ALLOWED_HOSTS = ['villaduka.com', 'www.villaduka.com', 'villaduka-52020258312a.herokuapp.com']
 
 
 # Application definition
