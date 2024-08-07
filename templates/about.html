@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+{% load static i18n flag_filter %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as LANGUAGES %}
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>{% trans "Villa Duka" %}</title>
+    <link href="{% static 'assets/images/logo.png' %}" rel="icon">
+    <link href="{% static 'assets/images/logo.png' %}" rel="apple-touch-icon">
+     <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendorvilla/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-villa-agency.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ***** Preloader End ***** -->
+
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8">
+          <ul class="info">
+            <li><i class="fa fa-envelope"></i>info@villaduka.com</li>
+            <li><a href="https://maps.app.goo.gl/35ur76aNYEqxUcTD8" target="_blank"><i class="fa fa-map"></i>{% trans "Rruga Gurkuqe, Kruje 1501, Albania" %}</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <ul class="social-links">
+            <li><a href="https://www.airbnb.com/rooms/998499954009010728?adults=1&enable_m3_private_room=true&check_in=2024-09-01&source_impression_id=p3_1701990625_FV5gDir4fVlwPN6A&previous_page_section_name=1000&federated_search_id=71f03e56-4236-431b-a148-d3e8aa1b9532&guests=1&check_out=2024-09-03&_set_bev_on_new_domain=1701990582_NjYxN2E4MjViNGU2&locale=en" target="_blank"><i class="fab fa-airbnb"></i></a></li>
+            <li><a href="https://www.booking.com/hotel/al/villa-duka-kreis-kruja.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaAaIAQGYAQm4AQfIAQzYAQHoAQH4AQyIAgGoAgO4Apm96qkGwAIB0gIkNzg5ZTkxM2ItOWRlYi00MzIzLWI4OTUtZWViMWI3NTAzZTA32AIG4AIB&sid=628f16f7bc3135ba02bf7cb19e182ae9&dest_id=10744938;dest_type=hotel;dist=0;group_adults=1;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=1;req_children=0;room1=A;sb_price_type=total;sr_order=popularity;srepoch=1698340532;srpvid=53ad79554a09007b;type=total;ucfs=1&" target="_blank"><i class="fab fa-b"></i></a></li>
+            <li><a href="https://www.google.com/search?q=villa+duka+kruje&sca_esv=576846173&rlz=1C5CHFA_enAL1066AL1066&sxsrf=AM9HkKkii-IEjwfTo72aWvA3LmGCvymODQ%3A1698340893540&ei=HaA6Za7EILqVxc8PzvqWmAc&hotel_occupancy=&oq=villa+duka&gs_lp=Egxnd3Mtd2l6LXNlcnAiCnZpbGxhIGR1a2EqAggBMggQABiABBiwAzIIEAAYgAQYsAMyCxAAGMsBGIAEGLADMgcQABgeGLADMgkQABgIGB4YsAMyCxAAGIoFGIYDGLADMgsQABiKBRiGAxiwA0iAC1AAWABwAXgAkAEAmAEAoAEAqgEAuAEByAEA4gMEGAEgQYgGAZAGBw&sclient=gws-wiz-serp" target="_blank"><i class="fab fa-google"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{% url 'index' %}" class="logo">
+                        <img src="{% static 'assets/images/logo.png' %}" width="415 px" height="80 px" alt="">
+                    </a>
+
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="{% url 'index' %}">{% trans "Home" %}</a></li>
+                      <li><a href="{% url 'about' %}" class="active">{% trans "About Us" %}</a></li>
+                      <li><a href="https://www.booking.com/hotel/al/villa-duka-kreis-kruja.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaAaIAQGYAQm4AQfIAQzYAQHoAQH4AQyIAgGoAgO4Apm96qkGwAIB0gIkNzg5ZTkxM2ItOWRlYi00MzIzLWI4OTUtZWViMWI3NTAzZTA32AIG4AIB&sid=628f16f7bc3135ba02bf7cb19e182ae9&dest_id=10744938;dest_type=hotel;dist=0;group_adults=1;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=1;req_children=0;room1=A;sb_price_type=total;sr_order=popularity;srepoch=1698340532;srpvid=53ad79554a09007b;type=total;ucfs=1&" target="_blank"><i class="fa fa-calendar"></i>{% trans 'Reserve Now' %} </a></li>
+                  </ul>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+     <ul>
+          <form action="{% url 'set_language' %}" method="post">
+              {% csrf_token %}
+              <input name="next" type="hidden" value="{{ request.path }}">
+              <select name="language" onchange="this.form.submit()">
+                  {% for lang_code, lang_name in LANGUAGES %}
+                      <option value="{{ lang_code }}" {% if lang_code == CURRENT_LANGUAGE %}selected{% endif %}>
+                          {{ lang_name }} {{ lang_code|flag }}
+                      </option>
+                  {% endfor %}
+              </select>
+          </form>
+      </ul> 
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <span class="breadcrumb"><a href="{% url 'index' %}">{% trans "Home" %}</a>  / {% trans "About Us" %} </span>
+          <h3>{% trans "About Us" %}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-page section" >
+    <div class="container" >
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6 align="center">| <strong>{% trans "About Us" %} </strong></h6>
+            <h2 align="center">{% trans "Get more Infos for our Home" %}</h2>
+          </div>
+
+          <p>{% trans "Nestled amidst the breathtaking landscapes of Kruja, our villa offers an idyllic retreat where luxury meets nature. With a rich history dating back centuries, this enchanting property seamlessly blends traditional Albanian charm with modern comforts, ensuring an unforgettable experience." %}</p>
+          <p>{% trans "Our villa boasts a variety of elegantly appointed rooms and suites, each designed to provide a serene escape. Enjoy stunning views of the surrounding mountains and lush gardens from your private balcony, offering a sense of tranquility that is truly unmatched." %}</p>
+          <br>
+          <p>{% trans "The heart of our villa lies in its commitment to personalized service. Our dedicated staff takes pride in delivering exceptional hospitality, ensuring that every guest's needs are met with the utmost care and attention. Indulge in our exquisite cuisine, featuring locally sourced ingredients and traditional Albanian flavors at our on-site restaurant." %}</p>
+          <br>
+          <p>{% trans "For those seeking adventure, Kruja offers a plethora of outdoor activities, from hiking in the pristine National Park to exploring the historic town center, home to the iconic Kruja Castle." %}</p>
+          <br>
+          <p>{% trans "Whether you're looking for a romantic getaway, a family vacation, or a venue for a special event, our villa in Kruja is the perfect destination. We invite you to experience the beauty, culture, and hospitality of this remarkable region with us. Your journey begins here, in our villa, where dreams become memories." %}</p>
+          <br>
+
+
+          <div class="row">
+            <div class="col-lg-12" align="left">
+              <div class="item phone">
+                <img src="{% static 'assets/images/phone-icon.png' %}" alt="" style="max-width: 52px;">
+                <h6>+355 694310240<br><span>{% trans "Phone Number" %}</span></h6>
+              </div>
+            </div>
+              <div class="col-lg-12" align="center">
+              <div class="item address">
+                <img src="{% static 'assets/images/map-color-icon.png' %}" alt="" style="max-width: 52px;">
+                <h6><a href="https://maps.app.goo.gl/35ur76aNYEqxUcTD8" target="_blank">{% trans "Rruga Gurkuqe, Kruje 1501, Albania" %}</a><br><span>{% trans "Business Address" %}</span></h6>
+              </div>
+            <div class="col-lg-12" align="right">
+              <div class="item email">
+                <img src="{% static 'assets/images/email-icon.png' %}" alt="" style="max-width: 52px;">
+                <h6>info@villaduka.com<br><span>{% trans "Business Email" %}</span></h6>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2024 Villa Duka. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+ <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendorvilla/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendorvilla/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/counter.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+  </body>
+</html>
