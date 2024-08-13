@@ -21,7 +21,7 @@ JAZZMIN_SETTINGS = {
     "site_logo_classes": "img-quadrat",
 
     # Relative path to a favicon for your site, will default to site_logo if absent (ideally 32x32 px)
-    "site_icon": None,
+    "site_icon": "assets/images/logo/logovilla.png",
 
     # Welcome text on the login screen
     "welcome_sign": "Welcome to Villa Admin Panel",
