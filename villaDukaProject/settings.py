@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'villawebapp.apps.VillawebappConfig',
     'modeltranslation',
+    'django_extensions',
+    'sslserver',
 ]
 
 MIDDLEWARE = [
@@ -147,13 +149,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 os.environ['SSL_CERT_FILE'] = certifi.where()
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server
-EMAIL_PORT = 587  # or the appropriate port for your SMTP server
-EMAIL_HOST_USER = 'villaduka2023@gmail.com'  # Replace with your email
-EMAIL_HOST_PASSWORD = 'gqbczswzlfrbebni' # Replace with your email password
-EMAIL_RECEIVER = 'villaduka2023@gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+EMAIL_HOST = 'business157.web-hosting.com'  # Replace with your SMTP server
+EMAIL_PORT = 465  # or the appropriate port for your SMTP server
+EMAIL_HOST_USER = 'info@villaduka.com'  # Replace with your email
+EMAIL_HOST_PASSWORD = '*9,abmJ^p&5K' # Replace with your email password
+EMAIL_RECEIVER = 'info@villaduka.com'
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True
 EMAIL_SSL_CERTFILE = None
 EMAIL_SSL_KEYFILE = None
 EMAIL_SSL_CERTIFICATE = None
